@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .header {
+                background-color: red;
+                padding: 50px;
+                text-align: center;
+            }
+
+            .main-container {
+                display: flex;
+                height: 800px;
+            }
+
+            .left-sidebar {
+                width: 20%;
+                background-color: lightblue;
+            }
+
+            .content {
+                background-color: blueviolet;
+                color: white;
+                flex-grow: 1;
+            }
+
+            .right-sidebar {
+                background-color: green;
+                width: 20%;
+            }
+
+            .footer {
+                background-color: pink;
+                padding: 50px;
+                text-align: center;
+            }
+
+            .footer-data {
+                display: flex;
+                margin: 0 auto;
+                justify-content: space-evenly;
+                width: 800px;
+                text-align: left;
+            }
+
+            .footer-data ul {
+                padding: 0;
+            }
+
+            .footer-data li {
+                list-style-type: none;
+            }
+
+            @media screen and (max-width: 400px) {
+                .header {
+                    background-color: aqua;
+                    display: none;
+                }
+
+                .right-sidebar {
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+    <html>
+        <div class="header">
+            Header
+        </div>
+        <div class="main-container">
+            <div class="left-sidebar">Left sidebar</div>
+            <div class="content">main content</div>
+            <div class="right-sidebar">right sidebar</div>
+        </div>
+        <div class="footer">
+            <div class="footer-data">
+                <div>
+                    <h2>Get to know us</h2>
+                    <ul>
+                        <li>Corporate values</li>
+                        <li>History</li>
+                        <li>Team</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Make money</h2>
+                    <ul>
+                        <li>Sell your products</li>
+                        <li>License products</li>
+                        <li>Manufacture</li>
+                        <li>Shipping</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Payment methods</h2>
+                    <ul>
+                        <li>Direct cash</li>
+                        <li>European Swift</li>
+                        <li>VISA</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </html>
+</html>

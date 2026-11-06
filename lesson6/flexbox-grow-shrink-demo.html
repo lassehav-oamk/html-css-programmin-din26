@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .container {
+                width: 600px;
+                display: flex;
+            }
+
+            #a {
+                background-color: aqua;
+            }
+
+            #b {
+                background-color: bisque;                
+                flex-grow: 1;
+            }
+
+            #c {
+                background-color: blueviolet;
+                color: white;
+                flex-grow: 1;
+            }
+
+            #d {
+                background-color: cadetblue;
+                flex-shrink: 1;
+            }
+
+            #e {
+                background-color: azure;
+                flex-shrink: 0;             
+            }
+
+            #f {
+                background-color: greenyellow;
+                flex-shrink: 2;
+            }
+
+            #d, #e, #f {
+                width: 250px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Flexbox grow shrink demo</h1>
+        <h2>Grow example</h2>
+        <div class="container">
+            <div id="a">hello asdfsafdasf lasdf asdfasdf</div>
+            <div id="b">flexbox</div>
+            <div id="c">world</div>
+        </div>
+        <h2>Shrink example</h2>
+        <div class="container">
+            <div id="d">hello</div>
+            <div id="e">flexbox</div>
+            <div id="f">world</div>
+        </div>
+    </body>
+</html>

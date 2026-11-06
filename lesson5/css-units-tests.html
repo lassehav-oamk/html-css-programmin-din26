@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .container {
+                width: 100%;
+                box-sizing: border-box;
+                
+                border: 2px solid #2563eb;
+                background: #eff6ff;
+            }
+
+            .card {
+                width: 50%;
+                box-sizing: border-box;
+                
+                border: 2px solid #c2410c;
+                background: #fff7ed;
+            }
+
+            .dimensions {
+                display: block;
+                margin-top: 8px;
+                font: 14px sans-serif;
+            }
+
+            .em-container {
+                font-size: 20px;
+            }
+
+            .em-card {
+                /* font-size: 2em; */
+                font-size: 30px;
+                border-bottom: 2em solid blue;
+                width: 5em;
+            }
+
+            html {
+                font-size: 10px;
+            }
+
+            .rem-container {
+                font-size: 1.5rem;
+            }
+
+            .rem-card {
+                font-size: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            Container
+            <div class="card">
+                This is the card (50% wide)
+                <span class="dimensions" id="card-dimensions"></span>
+            </div>
+            <span class="dimensions" id="container-dimensions"></span>
+        </div>
+
+        <h2>em example</h2>
+        <div class="em-container">
+            This is em-container
+            <div class="em-card">This is em-card</div>
+        </div>
+
+        <h2>REM example</h2>
+        <div class="rem-container">
+            This is rem-container
+            <div class="rem-card">This is rem-card</div>
+        </div>
+
+        <script>
+            const container = document.querySelector('.container');
+            const card = document.querySelector('.card');
+
+            function showDimensions(element, label) {
+                const { width, height } = element.getBoundingClientRect();
+                label.textContent = `${Math.round(width)}px × ${Math.round(height)}px`;
+            }
+
+            function updateDimensions() {
+                showDimensions(container, document.querySelector('#container-dimensions'));
+                showDimensions(card, document.querySelector('#card-dimensions'));
+            }
+
+            const observer = new ResizeObserver(updateDimensions);
+            observer.observe(container);
+            observer.observe(card);
+            updateDimensions();
+        </script>
+    </body>
+</html>
